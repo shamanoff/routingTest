@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {UsersService} from '../users/users.service';
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.scss']
 })
-export class UserComponent implements OnInit {
+export class UserComponent  {
 
-  constructor() { }
+public id: number;
+public name: string;
 
-  ngOnInit() {
+
+  constructor(id: number, name: string) {
+    this.id = id;
+    this.name = name;
   }
-
 }
+
