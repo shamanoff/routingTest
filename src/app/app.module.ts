@@ -11,8 +11,11 @@ import {RouterModule, Routes} from '@angular/router';
 import {UsersService} from './users/users.service';
 import {UserComponent} from './user/user.component';
 import {UserDetailsComponent} from './user-details/user-details.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {appRoutes} from "./app.routes";
 
-const appRoutes: Routes = [
+/*const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {
     path: 'users', component: UsersComponent, children: [
@@ -20,7 +23,7 @@ const appRoutes: Routes = [
   ]
   },
   {path: 'servers', component: ServersComponent},
-];
+];*/
 
 @NgModule({
   declarations: [
@@ -29,13 +32,15 @@ const appRoutes: Routes = [
     ServersComponent,
     HomeComponent,
     UserComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    NotFoundComponent
 
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [UsersService],

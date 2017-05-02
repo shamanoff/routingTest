@@ -2,7 +2,8 @@
   Users works!
 </h2>
 <div class="row">
-  <div class="large-3 columns" *ngFor="let u of users;"
+  <div @showTrigger
+    class="large-3 columns" *ngFor="let u of users;"
   >
     <h4>{{u.name}}</h4>
     <p>{{u.id}}</p>
