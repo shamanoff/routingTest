@@ -13,6 +13,7 @@ import {showTrigger} from "../animation";
 export class ServersComponent implements OnInit {
   @HostBinding('@showTrigger') routeAnimation = true;
 
+
   constructor(private  router: Router) { }
 
   toUsers() {
